@@ -1,0 +1,42 @@
+@use 'partials/variables' as *;
+
+$fa-font-path: "../webfonts" !default;
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    font-family: 'Silkscreen', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#header{
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .nav-link{
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    #jumbotron{
+        background-image: url(/public/img/jumbotron.jpg);
+        background-size: cover;
+        height: 450px;
+    }
+}
+ul {
+    list-style: none;
+}
+.my-img{
+    width: 200px;
+    height: 200px;
+}
