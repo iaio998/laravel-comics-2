@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Illuminate\Http\Request;
+use Illuminate\Http\Request;
 use App\Models\Comic;
 
 class ComicController extends Controller
@@ -46,7 +46,7 @@ class ComicController extends Controller
         $newComic->price = $data['price'];
         $newComic->sale_date = '2020-07-01';
         $newComic->series = $data['series'];
-        $newComic->type = 'a piacere';
+        $newComic->type = $data['type'];
         $newComic->save();
         return to_route('comics.index');
     }
