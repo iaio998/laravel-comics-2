@@ -40,3 +40,32 @@ ul {
     width: 200px;
     height: 200px;
 }
+.my-btn{
+    border: 2px solid white;
+    padding: 8px 10px;
+    position: absolute;
+    top: -2.5%;
+    right: 50%;
+    background-color: blue;
+   
+    &:hover{
+        transform: scale(1.1);
+        color: greenyellow;
+        cursor: pointer;
+        transition: 0.7s ease;
+    }
+}
+.my-btn-2{
+    border: 2px solid white;
+    padding: 8px 10px;
+    position: absolute;
+    top: -5%;
+    right: 50%;
+    background-color: blue;
+    &:hover{
+        transform: scale(1.1);
+        color: red;
+        cursor: pointer;
+        transition: 0.7s ease;
+    }
+}

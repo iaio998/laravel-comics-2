@@ -4,8 +4,13 @@
 
 @section('content')
 <main>
-    <div class="bg-black text-white py-5">
+    <div class="bg-black text-white position-relative py-5">
         <div class="container">
+            <span>
+                <a class="my-btn" href="{{route('comics.create')}}">
+                    Add new
+                </a>
+            </span>
             <div class="row">
                 @foreach ($comics as $comic)
                 @include('partials.card')
@@ -21,7 +26,6 @@
         <div class="container">
             <div class="row">
                 <div>
-
                 </div>
             </div>
         </div>

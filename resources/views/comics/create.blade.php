@@ -4,7 +4,12 @@
 
 @section('content')
 <main>
-    <div class="bg-black text-white py-5">
+    <div class="bg-black text-white position-relative py-5">
+        <span>
+            <a class="my-btn-2" href="{{route('comics.index')}}">
+                go back
+            </a>
+        </span>
         <div class="container">
             <div class="row">
                 <form action="{{route('comics.store')}}" method="POST">
