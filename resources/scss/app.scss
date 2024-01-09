@@ -69,3 +69,17 @@ ul {
         transition: 0.7s ease;
     }
 }
+.my-btn-dlt{
+    border: 2px solid white;
+    padding: 4px 5px;
+    top: -5%;
+    right: 50%;
+    background-color: red;
+    font-size: 0.8em;
+    &:hover{
+        transform: scale(1.1);
+        color: white;
+        cursor: pointer;
+        transition: 0.7s ease;
+    }
+}
