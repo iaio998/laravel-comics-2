@@ -7,7 +7,9 @@
     <div class="bg-black text-white py-5">
         <div class="container">
             <div class="row">
-                Questa e' una home
+                @foreach ($comics as $comic)
+                @include('partials.card')
+                @endforeach
             </div>
         </div>
     </div>

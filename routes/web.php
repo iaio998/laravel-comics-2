@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,14 +15,9 @@ use App\Http\Controllers\ComicController;
 |
 */
 
-Route::get('/', function () {
-    $hyper = config('my-menu.menu');
-    $first = config('my-footer.first');
-    $second = config('my-footer.second');
-    $third = config('my-footer.third');
-    $fourth = config('my-footer.fourth');
-    return view('home', compact('hyper', 'first', 'second', 'third', 'fourth'));
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::resource('comics', ComicController::class);
 
 // Route::get('/comics', function () {
 //     $product = config('my-comics.comics');
@@ -39,4 +35,3 @@ Route::get('/', function () {
 //         abort(404);
 //     }
 // })->name('pages.show');
-Route::resource('comics', ComicController::class);
