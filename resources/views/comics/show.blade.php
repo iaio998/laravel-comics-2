@@ -4,8 +4,13 @@
 
 @section('content')
 <main>
-    <div class="bg-black text-white py-5">
+    <div class="bg-black text-white position-relative py-5">
         <div class="container">
+            <span>
+                <a class="my-btn" href="{{route('comics.edit', $comic->id)}}">
+                    Modify
+                </a>
+            </span>
             <div class="row">
                 <div class="col-12">
                     <div>

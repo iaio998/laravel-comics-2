@@ -12,7 +12,7 @@
         </span>
         <div class="container">
             <div class="row">
-                <form action="{{route('comics.store')}}" method="POST">
+                <form action="{{route('comics.update', $comic->id)}}" method="POST">
                     @csrf
                     @method('PUT')
                     <input value="{{old($comic->title)}}" class="form-control my-1" type="text" id="title" name="title"
@@ -23,7 +23,6 @@
                         placeholder="{{$comic->thumb}}">
                     <input value="{{old($comic->price)}}" class="form-control my-1" type="text" id="price" name="price"
                         placeholder="{{$comic->price}}">
-
                     <input value="{{old($comic->series)}}" class="form-control my-1" type="text" id="series"
                         name="series" placeholder="{{$comic->series}}">
                     <input value="{{old($comic->type)}}" class="form-control my-1" type="text" id="type" name="type"
