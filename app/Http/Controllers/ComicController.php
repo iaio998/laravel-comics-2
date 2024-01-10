@@ -48,7 +48,6 @@ class ComicController extends Controller
      */
     public function store(StoreComicRequest $request)
     {
-
         $data = $request->validated();
         $newComic = Comic::create($data);
         return to_route('comics.show', $newComic);
