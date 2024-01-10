@@ -11,6 +11,6 @@
     <form class="text-center" action="{{route('comics.destroy', $comic->id)}}" method="POST">
         @csrf
         @method('DELETE')
-        <button class="my-btn-dlt" type="submit"> Delete</button>
+        <button class="my-btn-dlt" data-item-title="{{$comic->title}}" type="submit"> Delete</button>
     </form>
 </div>

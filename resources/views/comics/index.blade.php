@@ -31,4 +31,5 @@
         </div>
     </div>
 </main>
+@include('partials.modal_delete')
 @endsection
