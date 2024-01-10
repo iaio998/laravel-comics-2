@@ -23,6 +23,11 @@
                         placeholder="{{$comic->thumb}}">
                     <input value="{{old($comic->price)}}" class="form-control my-1" type="text" id="price" name="price"
                         placeholder="{{$comic->price}}">
+                    <div>
+                        <label for="sale_date">Sale date:</label>
+                        <input value="{{old($comic->sale_date)}}" class="form-control my-1" type="date" id="sale_date"
+                            name="sale_date" placeholder="{{$comic->sale_date}}">
+                    </div>
                     <input value="{{old($comic->series)}}" class="form-control my-1" type="text" id="series"
                         name="series" placeholder="{{$comic->series}}">
                     <input value="{{old($comic->type)}}" class="form-control my-1" type="text" id="type" name="type"

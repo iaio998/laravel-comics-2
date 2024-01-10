@@ -14,14 +14,38 @@
             <div class="row">
                 <form action="{{route('comics.store')}}" method="POST">
                     @csrf
-                    <input class="form-control my-1" type="text" id="title" name="title" placeholder="Title">
-                    <input class="form-control my-1" type="text" id="description" name="description"
-                        placeholder="Description">
-                    <input class="form-control my-1" type="text" id="thumb" name="thumb" placeholder="Image">
-                    <input class="form-control my-1" type="text" id="price" name="price" placeholder="Price">
-                    <input class="form-control my-1" type="text" id="series" name="series"
-                        placeholder="Description short">
-                    <input class="form-control my-1" type="text" id="type" name="type" placeholder="Type">
+                    <div>
+                        <label for="title">Title:</label>
+                        <input class="form-control my-1" type="text" id="title" name="title" placeholder="Title">
+                    </div>
+                    <div>
+                        <label for="description">Description:</label>
+                        <input class="form-control my-1" type="text" id="description" name="description"
+                            placeholder="Description">
+                    </div>
+                    <div>
+                        <label for="thumb">Image</label>
+                        <input class="form-control my-1" type="text" id="thumb" name="thumb" placeholder="Image">
+                    </div>
+                    <div>
+                        <label for="price">Price:</label>
+                        <input class="form-control my-1" type="text" id="price" name="price" placeholder="Price">
+                    </div>
+                    <div>
+                        <label for="sale_date">Sale date:</label>
+                        <input class="form-control my-1" type="date" id="sale_date" name="sale_date"
+                            placeholder="Sale date">
+                    </div>
+                    <div>
+                        <label for="series">Series:</label>
+                        <input class="form-control my-1" type="text" id="series" name="series"
+                            placeholder="Description short">
+                    </div>
+                    <div>
+                        <label for="type">Type:</label>
+                        <input class="form-control my-1" type="text" id="type" name="type" placeholder="Type">
+                    </div>
+
                     <button class="btn btn-primary" type="submit">Add</button>
                 </form>
             </div>

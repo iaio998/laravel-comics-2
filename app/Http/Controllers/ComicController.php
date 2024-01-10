@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\StoreComicRequest;
+use App\Http\Requests\UpdateComicRequest;
 
 class ComicController extends Controller
 {
@@ -46,7 +49,8 @@ class ComicController extends Controller
         $newComic->description = $data['description'];
         $newComic->thumb = $data['thumb'];
         $newComic->price = $data['price'];
-        $newComic->sale_date = '2020-01-17';
+        $newComic->sale_date = $data['sale_date'];
+        // $newComic->sale_date = '2020-01-17';
         $newComic->series = $data['series'];
         $newComic->type = 'a piacere';
         $newComic->save();
@@ -89,7 +93,7 @@ class ComicController extends Controller
         $comic->description = $data['description'];
         $comic->thumb = $data['thumb'];
         $comic->price = $data['price'];
-        $comic->sale_date = '2020-07-01';
+        $comic->sale_date = $data['sale_date'];
         $comic->series = $data['series'];
         $comic->type = $data['type'];
         $comic->update();
