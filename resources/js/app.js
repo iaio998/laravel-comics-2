@@ -21,10 +21,10 @@ buttonDelete.forEach((button) => {
         const bootstrapModal = new bootstrap.Modal(modal);
         bootstrapModal.show();
         // prendo il button per confermare l'eliminazione
-        const confirmDelete = modal.getElementById("confirm-delete");
+        const confirmDelete = modal.querySelector("button.btn-primary");
 
         confirmDelete.addEventListener("click", (event) => {
-            button.ParentElement.submit();
+            button.parentElement.submit();
         });
     });
 });
