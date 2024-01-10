@@ -46,22 +46,12 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
-        // dd($request->all());
-        $data = $request->all();
-        // $newComic = Comic::create($data);
-        $newComic = new Comic();
-        $newComic->title = $data['title'];
-        $newComic->description = $data['description'];
-        $newComic->thumb = $data['thumb'];
-        $newComic->price = $data['price'];
-        $newComic->sale_date = $data['sale_date'];
-        // $newComic->sale_date = '2020-01-17';
-        $newComic->series = $data['series'];
-        $newComic->type = 'a piacere';
-        $newComic->save();
-        return to_route('comics.index');
+
+        $data = $request->validated();
+        $newComic = Comic::create($data);
+        return to_route('comics.show', $newComic);
     }
 
     /**
@@ -93,16 +83,10 @@ class ComicController extends Controller
      * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(UpdateComicRequest $request, Comic $comic)
     {
-        $data = $request->all();
-        $comic->title = $data['title'];
-        $comic->description = $data['description'];
-        $comic->thumb = $data['thumb'];
-        $comic->price = $data['price'];
-        $comic->sale_date = $data['sale_date'];
-        $comic->series = $data['series'];
-        $comic->type = $data['type'];
+        $data = $request->validated();
+        $comic->fill($data);
         $comic->update();
         return to_route('comics.show', $comic->id);
     }

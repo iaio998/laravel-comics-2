@@ -26,6 +26,7 @@ class UpdateComicRequest extends FormRequest
         return [
             'title' => 'required|min:5|max:255|unique:comics',
             'type' => 'required|max:50',
+            'thumb' => 'required|max:255',
             'description' => 'required|max:255',
             'price' => 'required|numeric',
             'series' => 'required|max:50',
@@ -41,6 +42,8 @@ class UpdateComicRequest extends FormRequest
             'title.unique' => 'Il titolo deve essere univoco',
             'type.required' => 'Il tipo è obbligatorio',
             'type.max' => 'Il tipo deve avere massimo :max caratteri',
+            'thumb.required' => 'L\'immagine è obbligatoria',
+            'thumb.max' => 'L\'immagine deve avere massimo :max caratteri',
             'description.required' => 'La descrizione è obbligatoria',
             'description.max' => 'La descrizione deve avere massimo :max caratteri',
             'price.required' => 'Il prezzo è obbligatorio',

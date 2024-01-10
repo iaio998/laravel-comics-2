@@ -15,7 +15,6 @@
                     <button class="btn btn-primary" type="submit">Search</button>
                 </form>
             </span>
-
             <div class="row">
                 @foreach ($comics as $comic)
                 @include('partials.card')
